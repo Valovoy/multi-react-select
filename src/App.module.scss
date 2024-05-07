@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.select {
+  width: 400px;
+
+  .control {
+    border: 1px solid #a0a8ab;
+    box-shadow: none;
+    padding-block: 3px;
+    padding-right: 8px;
+    cursor: pointer;
+    font-size: 14px;
+
+    .placeholder {
+      color: #a0a8ab;
+    }
+
+    &:hover {
+      border-color: #0090cc;
+
+      .placeholder {
+        color: #3b4145;
+      }
+    }
+
+    .icon {
+      color: #3b4145;
+      width: 12px;
+      height: 12px;
+      transform: rotate(180deg);
+    }
+  }
+
+  .option {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    &.isSelected {
+      background-color: transparent;
+    }
+
+    .label {
+      font-size: 14px;
+      color: #3b4145;
+      margin-left: 10px;
+    }
+
+    .checkbox {
+      margin-right: 8px;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      border: 1px solid #a0a8ab;
+      transition: border-color 0.3s ease; // Transition for border color change
+      appearance: none; // Removes default styles
+      outline: none; // Removes focus outline
+      cursor: pointer; // Changes cursor on hover
+
+      &:checked {
+        border-color: #00b4ff; // Changes border color when checked
+        border-width: 3px; // Increases border width when checked
+      }
+
+      &--is-selected {
+        background-color: red;
+      }
+    }
+
+    &:hover {
+      background-color: #f0f3fa;
+
+      .checkbox {
+        border-color: #00b4ff;
+      }
+    }
+  }
+
+  .multiValue {
+    * {
+      padding: 0;
+    }
+
+    background-color: #f0f3fa;
+    padding: 3px 5px;
+    font-size: 14px;
+
+    .checkbox {
+      display: none;
+    }
+  }
+}
